@@ -5,37 +5,35 @@ export interface PostProps {
   body: string;
 }
 
-
 export interface Welcome {
-    id:       number;
-    name:     string;
-    username: string;
-    email:    string;
-    address:  Address;
-    phone:    string;
-    website:  string;
-    company:  Company;
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: Address;
+  phone: string;
+  website: string;
+  company: Company;
 }
 
 export interface Address {
-    street:  string;
-    suite:   string;
-    city:    string;
-    zipcode: string;
-    geo:     Geo;
+  street: string;
+  suite: string;
+  city: string;
+  zipcode: string;
+  geo: Geo;
 }
 
 export interface Geo {
-    lat: string;
-    lng: string;
+  lat: string;
+  lng: string;
 }
 
 export interface Company {
-    name:        string;
-    catchPhrase: string;
-    bs:          string;
+  name: string;
+  catchPhrase: string;
+  bs: string;
 }
-
 
 export interface PostData {
   userId: number;
@@ -49,11 +47,11 @@ export interface PostModalProps {
   onSubmit: (post: PostData) => void;
 }
 
-
 export interface UserModalProps {
   isOpen: boolean;
   onClose: () => void;
   onAddUser: (user: UserProps) => void;
+  onSubmit: (post: UserProps) => void; // ✅ Added as required
 }
 
 export interface UserProps {
@@ -78,6 +76,7 @@ export interface UserProps {
     bs: string;
   };
 }
+
 export interface UserData {
   name: string;
   username: string;
